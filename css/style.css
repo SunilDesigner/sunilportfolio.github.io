@@ -2,3 +2,15 @@
 .work_content_area .item-img {
     border: 1px solid #eee;
 }
+.navbar-brand img.img-fluid {
+    max-width: 80px;
+    filter: invert(100);
+}
+
+a.navbar-brand {
+    padding: 0;
+}
+.menu-shrink .navbar-brand img.img-fluid {
+    max-width: 80px;
+    filter: none;
+}
