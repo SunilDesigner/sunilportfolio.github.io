@@ -1,0 +1,464 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(../images/bodyBg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.btn.gradientBtn{
+	width: 100%;
+	    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+	background: rgb(0,242,143);
+background: -moz-linear-gradient(90deg, rgba(0,242,143,1) 0%, rgba(0,159,253,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(0,242,143,1) 0%, rgba(0,159,253,1) 100%);
+background: linear-gradient(90deg, rgba(0,242,143,1) 0%, rgba(0,159,253,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00f28f",endColorstr="#009ffd",GradientType=1);
+}
+
+img.img-fluid.position-absolute-custom-img {
+    position: absolute;
+    max-width: 110px;
+    height: auto !important;
+    top: 40%;
+    bottom: 40%;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+}
+.social-login img.img-fluid {
+    max-width: 40px;
+}
+
+.input-group input.form-control, .input-group span.input-group-text {
+    background-color: #f4f8f7 !important;
+    border: none;
+    padding: 15px 13px;
+    height: 50px;
+}
+.nav-link.active span , .hedingtext span {
+    border-bottom: 2px solid #009ffd;
+}
+
+.whiteBox .nav-item a.nav-link {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.nav-item a.nav-link.active {
+    color: #009ffd;
+}
+.formBox {
+    width: 80%;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: none;
+}
+.whiteBox {
+    box-shadow: 0px 0px 10px 0px #ccc;
+    overflow: hidden;
+    border-radius: 35px;
+}
+.h-100vh{
+	height: 100vh;
+}
+.abstractImg img.img-fluid {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.abstractImg {
+    height: 100%;
+}
+
+/**********otp***************/
+
+.digit-group input {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 200;
+  color: #333;
+  margin: 0 2px;
+	padding: 0px 10px;
+}
+.digit-group .splitter {
+  padding: 0 5px;
+  color: white;
+  font-size: 24px;
+}
+
+.prompt {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+.digit-group{
+	display: flex;
+	justify-content: space-between;
+}
+.otpText{
+	color: #313131;
+	text-align: center;
+	margin: 20px 0px;
+}
+
+/******************************/
+
+h1.hedingtext {
+    font-size: 25px;
+    font-weight: 600;
+    color: #009ffd;
+}
+
+
+/*****************************************/
+
+
+.container-custom{
+	
+	max-width: 1440px;
+	margin: 0px auto;
+	width: 96%;
+	height: 100vh;
+}
+.leftpostSection{
+	max-width: 80%;
+	width: 100%;
+}
+.logo img.img-fluid {
+    max-width: 125px;
+}
+.leftpostSection {
+    max-width: 73%;
+    width: 100%;
+}
+.searchbar input.form-control {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    border-right: 0;
+}
+
+button.btn.btn-search {
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-radius: 50px;
+    background: #f4f8f7 !important;
+}
+.rightprofileSection{
+	max-width: 25%;
+	width: 100%;
+	height: 100%;
+}
+h4.titlemovement {
+    font-size: 16px;
+    margin: 5px 0px;
+}
+header#header {
+    padding: 10px 0px;
+    border-bottom: 1px solid #eee;
+}
+.movementSection .owl-nav {
+    position: absolute;
+    top: 0;
+    bottom: 53px;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+    left: 0;
+    right: 0;
+}
+.movementSection button.owl-prev, .movementSection button.owl-next {
+    background: #fff !important;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+}
+
+img.moto-widget-grid-gallery-image.moto-link {
+    height: 300px;
+    object-fit: cover;
+    background: #333;
+	border-radius: 15px;
+}
+.optionicon .nav-item a.nav-link {
+    color: #313131;
+}
+.postSectionSlider h5.username {
+    margin: 0;
+    padding: 0px 10px;
+    font-size: 18px;
+}
+.postSectionSlider .item {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.rightprofileSection {
+    background: url(../images/bgRightside.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+	background-attachment: fixed;
+}
+.userprofileSectionRight .nav-item a.nav-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.userprofileSectionRight .nav-item a.nav-link h6 {
+    margin: 0;
+    padding: 0px 10px;
+	color: #313131;
+}
+
+img.img-fluid.userprofileimg, .userPostpofilepic img.img-fluid {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: contain;
+}
+
+.userprofileSectionRight {
+    position: sticky;
+    top: 48px;
+    position: -webkit-sticky;
+}
+.owl-carousel .owl-item .movementhumb .img-fluid {
+    height: 110px;
+    object-fit: cover;
+}
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.dropdown-menu.show {
+    display: block;
+    left: auto !important;
+    right: 0;
+}
+.lb-nav a.lb-next, .lb-nav a.lb-prev {
+    background-size: 25px;
+}
+
+
+/**********************profile***********************/
+
+.leftpostSection {
+	max-height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 10px;
+}
+.leftpostSection::-webkit-scrollbar {
+	width: 2px;
+	background-color: #eee
+}
+.leftpostSection::-webkit-scrollbar-thumb {
+	background-color: rgba(256, 256, 256, .5)
+}
+.leftpostSection::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(256, 256, 256, .2);
+	background-color: #ccc;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.hidespan span {
+    visibility: hidden;
+}
+.input-editbox {
+    display: flex;
+    align-items: center;
+}
+.profile-edit-filed .form-control:disabled {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+.input-editbox span {
+    color: #c93400;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+button.btn.gradientBtn.btnsmall {
+    max-width: 140px;
+    font-size: 15px;
+    height: 40px;
+}
+.totalfollowing {
+    margin: 0px 25px;
+}
+
+.totalfollowing h4 {
+    font-size: 15px;
+}
+.profile-edit-filed {
+    flex-basis: 40%;
+    margin-bottom: 65px;
+}
+.profileSetting , .settingSec, .DicoverSetting {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px 15px;
+}
+.userprofileSectionRight a.nav-link.active {
+    background: rgba(256,256,256,0.8);
+    box-shadow: 0px 0px 5px 0px #ccc;
+    border-radius: 40px;
+}
+
+ul.nav.flex-column.usernavigation {
+    padding: 0px 25px;
+}
+
+ul.nav.usernavigation li.nav-item {
+    margin-bottom: 15px;
+}
+.totalfollowing h2 {
+    color: #ec7e59;
+    font-size: 25px;
+}
+.rightprofileSection .nav-link.active span {
+    border-bottom: none;
+}
+
+
+/*******************setings*****************/
+
+
+/*SWITCH 3 ------------------------------------------------*/
+
+.switch3{
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 37px;
+  border-radius: 37px;
+  background-color: #f3f4f4;
+  cursor: pointer;
+  transition: all .3s;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px rgba(0,0,0, .3);
+	margin: 0px 0px 0px 10px;
+}
+.switch3 input{
+  display: none;
+}
+.switch3 input:checked + div{
+  left: calc(80px - 32px);
+  box-shadow: 0px 0px 0px white;
+}
+.switch3 div{
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
+  background-color: white;
+  top: 5px;
+  left: 5px;
+  box-shadow: 0px 0px 1px rgb(150,150,150);
+  transition: all .3s;
+}
+.switch3 div:before, .switch3 div:after{
+  position: absolute;
+  content: 'ON';
+  width: calc(80px - 40px);
+  height: 37px;
+  line-height: 37px;
+  font-size: 14px;
+  font-weight: bold;
+  top: -5px;
+}
+.switch3 div:before{
+  content: 'OFF';
+  color: rgb(120,120,120);
+  left: 100%;
+	padding: 0px 6px;
+}
+.switch3 div:after{
+  content: 'ON';
+  right: 100%;
+  color: white;
+}
+
+.switch3-checked{
+  background: rgb(0,242,143);
+background: -moz-linear-gradient(90deg, rgba(0,242,143,1) 0%, rgba(0,159,253,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(0,242,143,1) 0%, rgba(0,159,253,1) 100%);
+background: linear-gradient(90deg, rgba(0,242,143,1) 0%, rgba(0,159,253,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00f28f",endColorstr="#009ffd",GradientType=1);
+  box-shadow: none;
+}
+.rowcustom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+	margin-bottom: 15px;
+}
+
+.rowcustom span {
+    width: 200px;
+}
+.settingInner  select.form-control {
+    border-radius: 50px;
+    max-width: 160px;
+    border: none;
+}
+.blockboxright {
+    border: 1px solid #eee;
+    border-radius: 15px;
+}
+
+.blockboxright  img.img-fluid {
+    max-width: 25px;
+}
+
+.blockboxright h4 {
+    font-size: 15px;
+}
+
+/****************************discover************************************/
+
+
+
+.peopleImg img.img-fluid {
+    max-width: 150px;
+    box-shadow: 0px 00px 7px 0px #ccc;
+    border-radius: 50%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.peoplecolumn h2 {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.peoplecolumn button.btn.gradientBtn.text-center.btnsmall {
+    border-radius: 35px;
+}
+
+.peoplecolumn {
+    margin: 25px 0px;
+}
