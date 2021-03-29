@@ -17,3 +17,7 @@ a.navbar-brand {
 .postSectionSlider{
 	margin-top: 100px;
 }
+.whatsappDiv i.fa.fa-whatsapp {
+    font-size: 8vw;
+    color: #33ce31;
+}
