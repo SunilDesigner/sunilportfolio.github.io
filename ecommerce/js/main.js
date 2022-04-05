@@ -1,11 +1,4 @@
-/*  ---------------------------------------------------
-    Theme Name: Florist
-    Description: Florist - E-commerce Template
-    Author: Colorib
-    Author URI: https://www.colorib.com/
-    Version: 1.0
-    Created: Colorib
----------------------------------------------------------  */
+
 
 'use strict';
 
@@ -30,7 +23,38 @@
             var mixer = mixitup(containerEl);
         }
     });
+	
+	
+	/*------------------
+        submenu
+    --------------------*/
+	
+	
+	$('.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+      }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});	
+	
+	
+	/*------------------
+        fixedheader
+    --------------------*/
 
+	
+	
+	$(window).scroll(function(){
+    if ($(window).scrollTop() >= 300) {
+        $('.header').addClass('fixed-header');
+        
+    }
+    else {
+        $('.header').removeClass('fixed-header');
+      
+    }
+});	
+	
+	
     /*------------------
         Background Set
     --------------------*/
@@ -174,5 +198,10 @@
             }
         });
     });
+	
+	
+	
+	
+
 
 })(jQuery);
