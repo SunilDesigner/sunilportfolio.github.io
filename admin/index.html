@@ -188,8 +188,7 @@ form.search.open {
     padding: 15px 15px;
     text-align: center;
     border-radius: 8px;
-    border: 1px solid #eee;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 		form.navbar-search {
     max-width: 650px !important;
@@ -216,6 +215,92 @@ form.search.open {
 		.searchColumn .form-check label:before{
 			border-color: #7c7c7c
 		}
+		.detail-video {
+    background: #f7f7f7;
+    padding: 10px 20px;
+    max-width: 600px;
+}
+		.videoModal button.close {
+    position: absolute;
+    right: -8px;
+    top: -12px;
+    background: #fff;
+    opacity: 1;
+    border-radius: 16px;
+    padding: 0px 5px;
+    box-shadow: 0px 0px 5px 0px #555;
+}
+		
+		/**************************/
+		
+		
+div.dropdownSelect {
+  position: relative;
+}
+		.dropdownSelect i.fas.fa-calendar-alt {
+    position: absolute;
+    color: #fff;
+    top: 10px;
+    left: 6px;
+}
+
+div.dropdownSelect > div.caption {
+    background-color: #4e73df;
+    padding: 7px 10px 7px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+div.dropdownSelect > div.list {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+    display: none;
+    z-index: 9;
+    box-shadow: 0px 6px 6px 0px #ccc;
+}
+
+div.dropdownSelect > div.list > div.item {
+    padding: 7px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    text-align: center;
+}
+
+div.dropdownSelect > div.list > div.item.selected {
+  font-weight: bold;
+}
+
+		div.dropdownSelect > div.caption:hover{
+			background-color: #405eb5;
+			
+		}
+		
+div.dropdownSelect > div.list > div.item:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+div.dropdownSelect.open > div.caption {
+  border-radius: 3px 3px 0 0;
+  border-bottom: solid 1px #999;
+}
+
+div.dropdownSelect.open > div.list {
+  display: block;
+}
+		div#wrapper #content-wrapper {
+    background-color: #d3dce0;
+}
+		.SearchBoxDiv button.btn.btn-primary {
+    background: #f8f9fc;
+    color: #333;
+    border-left: 0;
+    border-color: #d3d3d3;
+}
 	</style>
 
 </head>
@@ -446,7 +531,7 @@ form.search.open {
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow py-0">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
@@ -456,9 +541,7 @@ form.search.open {
                     <!-- Topbar Search -->
                     
 					 
-					 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Run Report</a>
-
+					
                     
 
                 </nav>
@@ -548,12 +631,22 @@ form.search.open {
   </div>
 </div>
 						
-						<div class="mx-2" id="dropdownMenuButton">
-  <button type="button" class="btn btn-primary">
-	  <i class="fas fa-calendar-alt"></i> <span>05-12-2022 to 08-12-2022</span>
-  </button>
+						<div class="mx-2">
+							<div class="dropdownSelect">
+    <i class="fas fa-calendar-alt mr-2"></i><div class="caption">05-12-2022 to 08-12-2022</div>
+    <div class="list">
+      <div class="item">05-12-2022 to 08-12-2022</div>
+      <div class="item">03-12-2022 to 08-12-2022</div>
+      <div class="item">04-12-2022 to 08-12-2022</div>
+      <div class="item">07-12-2022 to 08-12-2022</div>
+      <div class="item">09-12-2022 to 08-12-2022</div>
+    </div>
+  </div>
   
 </div>
+							 <a href="#" class="d-flex btn btn-sm btn-primary shadow-sm align-items-center">
+								 <i class="fas fa-download fa-sm text-white-50 mr-2"></i> Run Report</a>
+
                        
 						</div>
                     </div>
@@ -907,7 +1000,7 @@ form.search.open {
 										</div>
 										</div>
 									
-                                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;" data-toggle="modal" data-target="#myModal">
+                                    <div class="d-flex justify-content-center align-items-center video-img video-btn" style="height: 150px;" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#videoModal">
                                         <img src="img/img.jpg" class="img-fluid" alt="">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
                                     </div>
@@ -1073,7 +1166,7 @@ form.search.open {
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-white mt-3">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; 2022</span>
@@ -1096,20 +1189,51 @@ form.search.open {
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade videoModal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+               
+                <div class="modal-body"><div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+</div></div>
+                <div class="modal-footers px-3 d-flex align-items-center justify-content-between">
+                   
+					<div class="detail-video col-12">	
+						<div class="d-flex my-1">
+					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Product</b></label><span>Russian Commercial Bank</span>
+					
+					</div>
+						<div class="d-flex my-1">
+					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Media Type</b></label><span>MG</span>
+					
+					</div>
+						<div class="d-flex my-1">
+					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Size</b></label><span>MG</span>
+					
+					</div>
+						<div class="d-flex my-1">
+					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Date</b></label><span>20-12-2022</span>
+					
+					</div>
+						<div class="d-flex my-1">
+					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Value</b></label><span>45000.00</span>
+					
+					</div>
+					</div>
+					
+				
+					<div class="d-flex">
+									<i class="fa fa-share-alt mx-3" aria-hidden="true"></i>
+									
+									<i class="fa fa-download" aria-hidden="true"></i>
+										</div>
+					
+					
                 </div>
             </div>
         </div>
@@ -1156,6 +1280,78 @@ $('.inputSearch').click(function() {
 		
 	
 </script>	
+	
+<script>
+	
+$(document).ready(function() {
+
+// Gets the video src from the data-src on each button
+
+var $videoSrc;  
+$('.video-btn').click(function() {
+    $videoSrc = $(this).data( "src" );
+});
+console.log($videoSrc);
+
+  
+  
+// when the modal is opened autoplay it  
+$('#videoModal').on('shown.bs.modal', function (e) {
+    
+// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+})
+  
+
+
+// stop playing the youtube video when I close the modal
+$('#videoModal').on('hide.bs.modal', function (e) {
+    // a poor man's stop video
+    $("#video").attr('src',$videoSrc); 
+}) 
+    
+    
+
+
+  
+  
+// document ready  
+});
+
+	
+	
+</script>	
+	
+	
+<script>
+	
+$(function() {
+  
+  $('.dropdownSelect > .caption').on('click', function() {
+    $(this).parent().toggleClass('open');
+  });
+  
+  $('.dropdownSelect > .list > .item').on('click', function() {
+    $('.dropdownSelect > .list > .item').removeClass('selected');
+    $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').text( $(this).text() );
+  });
+  
+  $(document).on('keyup', function(evt) {
+    if ( (evt.keyCode || evt.which) === 27 ) {
+      $('.dropdownSelect').removeClass('open');
+    }
+  });
+  
+  $(document).on('click', function(evt) {
+    if ( $(evt.target).closest(".dropdownSelect > .caption").length === 0 ) {
+      $('.dropdownSelect').removeClass('open');
+    }
+  });
+  
+});	
+	
+</script>	
+	
 
 </body>
 
