@@ -19,10 +19,16 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 	
 	<style>
+		nav.topbar{
+			height: auto;
+		}
 	
 	div.search-bar {
     display: flex;
   }
+		.dropdown-menu .form-check label:before {
+    border-color: #333;
+}
   
   form.search {
     display: inline-flex;
@@ -74,14 +80,19 @@ form.search.open {
 		i.fa.fa-play-circle {
     font-size: 35px;
     color: #4e73df;
-    border: 1px solid #4e73df;
-    border-radius: 30px;
-    padding: 25px 25px;
+}
+		.video-img i.fa.fa-play-circle {
+    position: absolute;
 }
 		.form-check-label {
     margin-bottom: 0;
     font-size: 1rem;
 			padding-left: 8px;
+}
+		.video-img img.img-fluid {
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
 }
 		
 		
@@ -131,12 +142,12 @@ form.search.open {
 }
 
 .form-check label:before {
-     height: 18px;
-     width: 18px;
-    border: 1px solid #000;
+    height: 18px;
+    width: 18px;
+    border: 1px solid #7c7c7c;
     border-radius: 4px;
     top: 3px;
-    background: #fff;
+    background: transparent;
 }
 .form-check label:after {
     width: 10px;
@@ -184,6 +195,27 @@ form.search.open {
     max-width: 650px !important;
     width: 100%;
 }
+		.sidebar label.form-check-label {
+    color: #fff;
+}
+		.sidebar.sidebar-dark {
+    background: #1a1c1f;
+}
+		.card-body .form-check label:before {
+    border: 1px solid #333;
+}
+		.bg-black{
+			background-color: #1a1c1f;
+		}
+		.searchColumn hr {
+    border-color: #fff;
+}
+		.searchColumn i.fas.fa-search{
+			color: #fff;
+		}
+		.searchColumn .form-check label:before{
+			border-color: #7c7c7c
+		}
 	</style>
 
 </head>
@@ -194,7 +226,7 @@ form.search.open {
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -230,7 +262,7 @@ form.search.open {
                     <span>Customer</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white p-2 collapse-inner rounded">
+                    <div class="pl-4 collapse-inner rounded">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
       <label class="form-check-label" for="check1">Option 1</label>
@@ -268,7 +300,7 @@ form.search.open {
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
-                    <div class="bg-white p-2 collapse-inner rounded">
+                    <div class="pl-4 collapse-inner rounded">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
       <label class="form-check-label" for="check1">Option 1</label>
@@ -276,6 +308,22 @@ form.search.open {
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
       <label class="form-check-label" for="check2">Option 2</label>
+    </div>
+						<div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
+      <label class="form-check-label" for="check3">Option 3</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+      <label class="form-check-label" for="check4">Option 4</label>
+    </div>
+						<div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
+      <label class="form-check-label" for="check5">Option 5</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+      <label class="form-check-label" for="check6">Option 6</label>
     </div>
                     </div>
                 </div>
@@ -288,7 +336,7 @@ form.search.open {
                     <span>Sector</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white p-2 collapse-inner rounded">
+                   <div class="pl-4 collapse-inner rounded">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
       <label class="form-check-label" for="check1">Option 1</label>
@@ -296,6 +344,22 @@ form.search.open {
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
       <label class="form-check-label" for="check2">Option 2</label>
+    </div>
+						<div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
+      <label class="form-check-label" for="check3">Option 3</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+      <label class="form-check-label" for="check4">Option 4</label>
+    </div>
+						<div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
+      <label class="form-check-label" for="check5">Option 5</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+      <label class="form-check-label" for="check6">Option 6</label>
     </div>
                     </div>
                 </div>
@@ -308,7 +372,7 @@ form.search.open {
                     <span>Category</span>
                 </a>
                 <div id="collapseCategory" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white p-2 collapse-inner rounded">
+                    <div class="pl-4 collapse-inner rounded">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
       <label class="form-check-label" for="check1">Option 1</label>
@@ -316,6 +380,22 @@ form.search.open {
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
       <label class="form-check-label" for="check2">Option 2</label>
+    </div>
+						<div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
+      <label class="form-check-label" for="check3">Option 3</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+      <label class="form-check-label" for="check4">Option 4</label>
+    </div>
+						<div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
+      <label class="form-check-label" for="check5">Option 5</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+      <label class="form-check-label" for="check6">Option 6</label>
     </div>
                     </div>
                 </div>
@@ -352,9 +432,7 @@ form.search.open {
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
+           
 
            
 
@@ -371,13 +449,13 @@ form.search.open {
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
                     <!-- Topbar Search -->
                     
-					
+					 
 					 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Run Report</a>
 
@@ -472,7 +550,7 @@ form.search.open {
 						
 						<div class="mx-2" id="dropdownMenuButton">
   <button type="button" class="btn btn-primary">
-    Calender
+	  <i class="fas fa-calendar-alt"></i> <span>05-12-2022 to 08-12-2022</span>
   </button>
   
 </div>
@@ -506,12 +584,12 @@ form.search.open {
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
+                            <div class="card bg-black searchColumn h-100 py-2">
+                                <div class="card-body py-0">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-											<div class="d-flex justify-content-between">
-											<h6 class="m-0 font-weight-bold text-gray-900">Customer</h6>
+											<div class="d-flex justify-content-between align-items-center">
+											<h6 class="m-0 font-weight-bold text-white">Customer</h6>
 											<div class="search-bar">
                         <form class="search" action="">
                           <input class="search" type="text" placeholder="Search">
@@ -523,32 +601,32 @@ form.search.open {
 											
 											<hr class="mb-0">
                                             
-                                            <div class="h5 mb-0 text-gray-800">
+                                            <div class="h5 mb-0">
 											
-											<div class="bg-white p-2 collapse-inner rounded">
+											<div class="p-2 collapse-inner rounded">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label" for="check1">Option 1</label>
+      <label class="form-check-label text-white" for="check1">Option 1</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
+      <label class="form-check-label text-white" for="check2">Option 2</label>
     </div>
 						<div class="form-check">
       <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label" for="check3">Option 3</label>
+      <label class="form-check-label text-white" for="check3">Option 3</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
+      <label class="form-check-label text-white" for="check4">Option 4</label>
     </div>
 						<div class="form-check">
       <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label" for="check5">Option 5</label>
+      <label class="form-check-label text-white" for="check5">Option 5</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
+      <label class="form-check-label text-white" for="check6">Option 6</label>
     </div>
                     </div>
 											
@@ -561,12 +639,12 @@ form.search.open {
                         </div>
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
+                            <div class="card bg-black searchColumn h-100 py-2">
+                                <div class="card-body py-0">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-											<div class="d-flex justify-content-between">
-											<h6 class="m-0 font-weight-bold text-gray-900">Product</h6>
+											<div class="d-flex justify-content-between align-items-center">
+											<h6 class="m-0 font-weight-bold text-white">Product</h6>
 											<div class="search-bar">
                         <form class="search" action="">
                           <input class="search" type="text" placeholder="Search">
@@ -578,32 +656,32 @@ form.search.open {
 											
 											<hr class="mb-0">
                                             
-                                            <div class="h5 mb-0 text-gray-800">
+                                            <div class="h5 mb-0">
 											
-											<div class="bg-white p-2 collapse-inner rounded">
+											<div class="p-2 collapse-inner rounded">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label" for="check1">Option 1</label>
+      <label class="form-check-label text-white" for="check1">Option 1</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
+      <label class="form-check-label text-white" for="check2">Option 2</label>
     </div>
 						<div class="form-check">
       <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label" for="check3">Option 3</label>
+      <label class="form-check-label text-white" for="check3">Option 3</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
+      <label class="form-check-label text-white" for="check4">Option 4</label>
     </div>
 						<div class="form-check">
       <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label" for="check5">Option 5</label>
+      <label class="form-check-label text-white" for="check5">Option 5</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
+      <label class="form-check-label text-white" for="check6">Option 6</label>
     </div>
                     </div>
 											
@@ -617,12 +695,12 @@ form.search.open {
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
+                            <div class="card bg-black searchColumn h-100 py-2">
+                                <div class="card-body py-0">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-											<div class="d-flex justify-content-between">
-											<h6 class="m-0 font-weight-bold text-gray-900">Sector</h6>
+											<div class="d-flex justify-content-between align-items-center">
+											<h6 class="m-0 font-weight-bold text-white">Sector</h6>
 											<div class="search-bar">
                         <form class="search" action="">
                           <input class="search" type="text" placeholder="Search">
@@ -634,32 +712,32 @@ form.search.open {
 											
 											<hr class="mb-0">
                                             
-                                            <div class="h5 mb-0 text-gray-800">
+                                            <div class="h5 mb-0">
 											
-											<div class="bg-white p-2 collapse-inner rounded">
+											<div class="p-2 collapse-inner rounded">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label" for="check1">Option 1</label>
+      <label class="form-check-label text-white" for="check1">Option 1</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
+      <label class="form-check-label text-white" for="check2">Option 2</label>
     </div>
 						<div class="form-check">
       <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label" for="check3">Option 3</label>
+      <label class="form-check-label text-white" for="check3">Option 3</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
+      <label class="form-check-label text-white" for="check4">Option 4</label>
     </div>
 						<div class="form-check">
       <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label" for="check5">Option 5</label>
+      <label class="form-check-label text-white" for="check5">Option 5</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
+      <label class="form-check-label text-white" for="check6">Option 6</label>
     </div>
                     </div>
 											
@@ -673,45 +751,49 @@ form.search.open {
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
+                            <div class="card bg-black searchColumn h-100 py-2">
+                                <div class="card-body py-0">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-											<div class="d-flex justify-content-between">
-											<h6 class="m-0 font-weight-bold text-gray-900">Category</h6>
-											<button class="btn p-0" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
+											<div class="d-flex justify-content-between align-items-center">
+											<h6 class="m-0 font-weight-bold text-white">Category</h6>
+											<div class="search-bar">
+                        <form class="search" action="">
+                          <input class="search" type="text" placeholder="Search">
+                        </form>
+                        <span class="search-icon"><i class="fas fa-search"></i></span>
+                        
+                      </div>
 											</div>
 											
 											<hr class="mb-0">
                                             
-                                            <div class="h5 mb-0 text-gray-800">
+                                            <div class="h5 mb-0">
 											
-											<div class="bg-white p-2 collapse-inner rounded">
+											<div class="p-2 collapse-inner rounded">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label" for="check1">Option 1</label>
+      <label class="form-check-label text-white" for="check1">Option 1</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
+      <label class="form-check-label text-white" for="check2">Option 2</label>
     </div>
 						<div class="form-check">
       <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label" for="check3">Option 3</label>
+      <label class="form-check-label text-white" for="check3">Option 3</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
+      <label class="form-check-label text-white" for="check4">Option 4</label>
     </div>
 						<div class="form-check">
       <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label" for="check5">Option 5</label>
+      <label class="form-check-label text-white" for="check5">Option 5</label>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
+      <label class="form-check-label text-white" for="check6">Option 6</label>
     </div>
                     </div>
 											
@@ -776,13 +858,13 @@ form.search.open {
 											<div class="bg-white p-2 collapse-inner rounded">
                       <ul class="nav flex-column">
     <li class="nav-item">
-      <a class="nav-link text-gray-800" href="#">By Month</a>
+		<a class="nav-link text-gray-800" href="#"><h6 class="m-0">By Month</h6></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-gray-800" href="#">By Year</a>
+      <a class="nav-link text-gray-800" href="#"><h6 class="m-0">By Year</h6></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-gray-800" href="#">Default</a>
+      <a class="nav-link text-gray-800" href="#"><h6 class="m-0">Default</h6></a>
     </li>
     
   </ul>
@@ -811,7 +893,7 @@ form.search.open {
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body py-2">
 									
 									<div class="d-flex justify-content-between align-items-center">
 									<div class="form-check">
@@ -825,8 +907,8 @@ form.search.open {
 										</div>
 										</div>
 									
-                                    <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
-                                        
+                                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;" data-toggle="modal" data-target="#myModal">
+                                        <img src="img/img.jpg" class="img-fluid" alt="">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
                                     </div>
                                 </div>
@@ -836,7 +918,7 @@ form.search.open {
                         <!-- Earnings (Annual) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body py-2">
 									
 									<div class="d-flex justify-content-between align-items-center">
 									<div class="form-check">
@@ -850,8 +932,8 @@ form.search.open {
 										</div>
 										</div>
 									
-                                    <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
-                                        
+                                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;">
+                                        <img src="img/img.jpg" class="img-fluid" alt="">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
                                     </div>
                                 </div>
@@ -861,7 +943,7 @@ form.search.open {
                         <!-- Tasks Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body py-2">
 									
 									<div class="d-flex justify-content-between align-items-center">
 									<div class="form-check">
@@ -875,8 +957,8 @@ form.search.open {
 										</div>
 										</div>
 									
-                                    <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
-                                        
+                                   <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;">
+                                        <img src="img/img.jpg" class="img-fluid" alt="">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
                                     </div>
                                 </div>
@@ -886,7 +968,7 @@ form.search.open {
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body py-2">
 									
 									<div class="d-flex justify-content-between align-items-center">
 									<div class="form-check">
@@ -900,8 +982,8 @@ form.search.open {
 										</div>
 										</div>
 									
-                                    <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
-                                        
+                                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;">
+                                        <img src="img/img.jpg" class="img-fluid" alt="">
 										<i class="fa fa-play-circle" aria-hidden="true"></i>
                                     </div>
                                 </div>
@@ -994,7 +1076,7 @@ form.search.open {
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Sunil Web</span>
+                        <span>Copyright &copy; 2022</span>
                     </div>
                 </div>
             </footer>
@@ -1014,7 +1096,7 @@ form.search.open {
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
