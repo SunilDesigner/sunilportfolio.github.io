@@ -259,7 +259,7 @@ div.dropdownSelect > div.list {
     border-radius: 0 0 3px 3px;
     display: none;
     z-index: 9;
-    box-shadow: 0px 6px 6px 0px #ccc;
+    box-shadow: 0px 0px 3px 0px #ccc;
 }
 
 div.dropdownSelect > div.list > div.item {
@@ -309,6 +309,36 @@ div.dropdownSelect.open > div.list {
     width: 88.3%;
     right: 0;
 }
+		/*
+ *  STYLE 3
+ */
+		
+		.scrollbar {
+    height: 180px;
+    overflow-y: scroll;
+			margin-top: 10px;
+}
+		.force-overflow {
+    min-height: 450px;
+}
+
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #4e73df;
+}
+
 	</style>
 
 </head>
@@ -702,9 +732,9 @@ div.dropdownSelect.open > div.list {
 											
 											<hr class="mb-0">
                                             
-                                            <div class="h5 mb-0">
+                                            <div class="h5 mb-0 scrollbar" id="style-3">
 											
-											<div class="p-2 collapse-inner rounded">
+											<div class="p-2 collapse-inner rounded force-overflow">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
       <label class="form-check-label text-white" for="check1">Option 1</label>
@@ -757,9 +787,9 @@ div.dropdownSelect.open > div.list {
 											
 											<hr class="mb-0">
                                             
-                                            <div class="h5 mb-0">
+                                            <div class="h5 mb-0 scrollbar" id="style-3">
 											
-											<div class="p-2 collapse-inner rounded">
+											<div class="p-2 collapse-inner rounded force-overflow">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
       <label class="form-check-label text-white" for="check1">Option 1</label>
@@ -813,9 +843,9 @@ div.dropdownSelect.open > div.list {
 											
 											<hr class="mb-0">
                                             
-                                            <div class="h5 mb-0">
+                                            <div class="h5 mb-0 scrollbar" id="style-3">
 											
-											<div class="p-2 collapse-inner rounded">
+											<div class="p-2 collapse-inner rounded force-overflow">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
       <label class="form-check-label text-white" for="check1">Option 1</label>
@@ -869,9 +899,9 @@ div.dropdownSelect.open > div.list {
 											
 											<hr class="mb-0">
                                             
-                                            <div class="h5 mb-0">
+                                            <div class="h5 mb-0 scrollbar" id="style-3">
 											
-											<div class="p-2 collapse-inner rounded">
+											<div class="p-2 collapse-inner rounded force-overflow">
                         <div class="form-check">
       <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
       <label class="form-check-label text-white" for="check1">Option 1</label>
