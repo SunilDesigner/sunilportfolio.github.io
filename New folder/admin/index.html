@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Dashboard</title>
-
-
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-	
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Dashboard</title>
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="css/sb-admin-2.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
 	<style>
-		nav.topbar{
-			height: auto;
-		}
-	
-	div.search-bar {
+nav.topbar {
+    height: auto;
+}
+div.search-bar {
     display: flex;
-  }
-		.dropdown-menu .form-check label:before {
+}
+.dropdown-menu .form-check label:before {
     border-color: #333;
 }
-  
-  form.search {
+form.search {
     display: inline-flex;
     max-width: 0;
     overflow: hidden;
@@ -39,16 +31,17 @@ form.search.open {
     max-width: 100%;
     width: 100%;
     background: #fff;
+    height: 35px;
+    border-radius: 25px;
 }
-  div.search-bar {
+div.search-bar {
     display: flex;
     position: absolute;
     right: 0;
     width: 100%;
     justify-content: space-between;
 }
-  
-  .search-bar input.search {
+.search-bar input.search {
     margin: 0 0.4em;
     border: none;
     background: none;
@@ -57,46 +50,41 @@ form.search.open {
     width: 100%;
     max-width: 100%;
 }
-  input.search:focus {
+input.search:focus {
     outline: none;
-  }
-  
-  .btn:focus {
+}
+.btn:focus {
     outline: none;
     color: navy;
     background: #ccf;
-  }
-  
-  .search-bar span.search-icon {
+}
+.search-bar span.search-icon {
     display: flex;
     position: relative;
     cursor: pointer;
     align-items: center;
 }
-		button.btn.active {
+button.btn.active {
     background: #4e73df;
     color: #fff;
 }
-		i.fa.fa-play-circle {
+i.fa.fa-play-circle {
     font-size: 35px;
     color: #4e73df;
 }
-		.video-img i.fa.fa-play-circle {
+.video-img i.fa.fa-play-circle {
     position: absolute;
 }
-		.form-check-label {
+.form-check-label {
     margin-bottom: 0;
-    font-size: 1rem;
-			padding-left: 8px;
+    padding-left: 15px;
+    font-size: 14px;
 }
-		.video-img img.img-fluid {
+.video-img img.img-fluid {
     border-radius: 5px;
     height: 100%;
     object-fit: cover;
 }
-		
-		
-
 .form-check label:before {
     content: "";
     -webkit-appearance: none;
@@ -111,7 +99,6 @@ form.search.open {
     border-radius: 100%;
     background: #fff;
 }
-
 .form-check label:after {
     content: "";
     width: 22px;
@@ -140,13 +127,12 @@ form.search.open {
     display: none;
     cursor: pointer;
 }
-
 .form-check label:before {
     height: 18px;
     width: 18px;
     border: 1px solid #7c7c7c;
     border-radius: 4px;
-    top: 3px;
+    top: 20px;
     background: transparent;
 }
 .form-check label:after {
@@ -154,21 +140,24 @@ form.search.open {
     height: 10px;
     background: #0972dd;
     position: absolute;
-    top: 7px;
+    top: 24px;
     left: 4px;
     border-radius: 100%;
 }
-	.card .form-check {
-    margin: 5px 0px;
+.card .form-check {
+    margin: 0px 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
 }
-		.search-field {
+.search-field {
     background: #fff;
     padding: 20px 15px 0;
     box-shadow: 0px 0px 5px 0px #ccc;
     border-radius: 8px;
-			margin-bottom: 30px;
+    margin-bottom: 30px;
 }
-		.inputSearch {
+.inputSearch {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -176,51 +165,51 @@ form.search.open {
     left: 0;
     z-index: 99;
 }
-		i.fa.fa-download, i.fa.fa-share-alt {
+i.fa.fa-download, i.fa.fa-share-alt {
     color: #4e73df;
 }
-		.tab-content {
+.tab-content {
     background: #fff;
     margin-top: 20px;
 }
-		.SearchBoxDiv {
+.SearchBoxDiv {
     background: #fff;
     padding: 15px 15px;
     text-align: center;
     border-radius: 8px;
     margin-bottom: 20px;
 }
-		form.navbar-search {
+form.navbar-search {
     max-width: 650px !important;
     width: 100%;
 }
-		.sidebar label.form-check-label {
+.sidebar label.form-check-label {
     color: #fff;
 }
-		.sidebar.sidebar-dark {
+.sidebar.sidebar-dark {
     background: #1a1c1f;
 }
-		.card-body .form-check label:before {
+.card-body .form-check label:before {
     border: 1px solid #333;
 }
-		.bg-black{
-			background-color: #1a1c1f;
-		}
-		.searchColumn hr {
+.bg-black {
+    background-color: #1a1c1f;
+}
+.searchColumn hr {
     border-color: #fff;
 }
-		.searchColumn i.fas.fa-search{
-			color: #fff;
-		}
-		.searchColumn .form-check label:before{
-			border-color: #7c7c7c
-		}
-		.detail-video {
+.searchColumn i.fas.fa-search {
+    color: #fff;
+}
+.searchColumn .form-check label:before {
+    border-color: #7c7c7c
+}
+.detail-video {
     background: #f7f7f7;
     padding: 10px 20px;
     max-width: 600px;
 }
-		.videoModal button.close {
+.videoModal button.close {
     position: absolute;
     right: -8px;
     top: -12px;
@@ -230,78 +219,69 @@ form.search.open {
     padding: 0px 5px;
     box-shadow: 0px 0px 5px 0px #555;
 }
-		
-		/**************************/
+/**************************/
 		
 		
 div.dropdownSelect {
-  position: relative;
+    position: relative;
 }
-		.dropdownSelect i.fas.fa-calendar-alt {
+.dropdownSelect i.fas.fa-calendar-alt {
     position: absolute;
     color: #fff;
     top: 10px;
     left: 6px;
 }
-
 div.dropdownSelect > div.caption {
     background-color: #4e73df;
     padding: 7px 10px 7px 30px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     color: #fff;
 }
-
 div.dropdownSelect > div.list {
     position: absolute;
-    background-color: #ffffff;
+    background-color: #1a1c1f;
     width: 100%;
     border-radius: 0 0 3px 3px;
     display: none;
     z-index: 9;
-    box-shadow: 0px 0px 3px 0px #ccc;
 }
-
 div.dropdownSelect > div.list > div.item {
     padding: 7px 15px;
     cursor: pointer;
-    border-bottom: 1px solid #eee;
-    font-size: 15px;
+    border-bottom: 1px solid #494a4a;
+    font-size: 14px;
     text-align: center;
+	color: #fff;
 }
-
 div.dropdownSelect > div.list > div.item.selected {
-  font-weight: bold;
+    font-weight: bold;
 }
-
-		div.dropdownSelect > div.caption:hover{
-			background-color: #405eb5;
-			
-		}
-		
+div.dropdownSelect > div.caption:hover {
+    background-color: #000;
+}
 div.dropdownSelect > div.list > div.item:hover {
-  background-color: #333;
-  color: #fff;
+    background-color: #333;
+    color: #fff;
 }
-
 div.dropdownSelect.open > div.caption {
-  border-radius: 3px 3px 0 0;
-  border-bottom: solid 1px #999;
+    border-radius: 3px 3px 0 0;
+    border-bottom: solid 1px #999;
 }
-
 div.dropdownSelect.open > div.list {
-  display: block;
+    display: block;
 }
-		div#wrapper #content-wrapper {
+div#wrapper #content-wrapper {
     background-color: #d3dce0;
 }
-		.SearchBoxDiv button.btn.btn-primary {
+.SearchBoxDiv button.btn.btn-primary {
     background: #f8f9fc;
     color: #333;
     border-left: 0;
-    border-color: #d3d3d3;
+    border-color: #000;
+    border-radius: 0px 20px 20px 0px;
 }
-		footer.sticky-footer {
+footer.sticky-footer {
     padding: 1rem 0;
     flex-shrink: 0;
     position: absolute;
@@ -309,986 +289,968 @@ div.dropdownSelect.open > div.list {
     width: 100%;
     right: 0;
 }
-		div#content {
+div#content {
     position: relative;
 }
-		/*
+/*
  *  STYLE 3
  */
 		
-		.scrollbar {
+.scrollbar {
     height: 180px;
     overflow-y: scroll;
-			margin-top: 10px;
+    margin-top: 10px;
 }
-		.force-overflow {
+.force-overflow {
     min-height: 450px;
 }
-
-#style-3::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+ #style-3::-webkit-scrollbar-track {
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ background-color: #F5F5F5;
 }
-
-#style-3::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #F5F5F5;
+ #style-3::-webkit-scrollbar {
+ width: 6px;
+ background-color: #F5F5F5;
 }
-
-#style-3::-webkit-scrollbar-thumb
-{
-	background-color: #4e73df;
+ #style-3::-webkit-scrollbar-thumb {
+ background-color: #4e73df;
 }
+/*****************************/
+		
+.table > :not(:last-child) > :last-child > * {
+    border-bottom-color: #bfc7cb;
+}
+.segmentation-block {
+    margin: 0 0 30px;
+    background-color: #fff;
+    border: 2px solid #bfc7cb;
+    padding: 25px;
+    border-radius: 25px;
+    position: relative;
+}
+.segmentation-block h4.color1 {
+    border-color: #1a73e8;
+}
+div.segmentation-block h4 {
+    font-size: 16px;
+    min-height: 35px;
+}
+.segmentation-block h4 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #000;
+    border-bottom: 2px solid #000;
+    min-height: 60px;
+    text-align: center;
+    margin: 0;
+}
+.segmentation-block table thead tr th {
+    padding: 0 20px;
+}
+.segmentation-block table thead tr th {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    padding: 0px 30px 0;
+    width: 11.11%;
+    border-right: 2px solid rgba(128, 128, 128, 0.3);
+}
+.segmentation-block h3.color1 span {
+    color: #1a73e8;
+}
+.segmentation-block h3 span {
+    font-size: 16px;
+}
+.segmentation-block h3 span {
+    display: block;
+    margin: 0 0 10px;
+}
+.segmentation-block h3 {
+    font-size: 12px;
+    text-align: center;
+}
+.segmentation-block h3 {
+    font-size: 16px;
+    min-height: 55px;
+}
+.segmentation-block h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    margin: 0;
+}
+.segmentation-block table tbody tr td {
+    font-size: 12px;
+}
+.segmentation-block table tbody tr td {
+    padding: 10px 15px 0;
+}
+.segmentation-block table tbody tr td {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    padding: 30px 30px 0;
+    width: 11.11%;
+    border-right: 2px solid rgba(128, 128, 128, 0.3);
+}
+.nav.nav-pills button.btn {
+    padding: 4px 20px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    display: table;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.nav.nav-pills button.btn.active {
+    color: #fff;
+    border-color: #4e73df;
+}
+.SearchBoxDiv input.form-control {
+    border-color: #000;
+    border-radius: 20px;
+}
+.btn-primary {
+    border-radius: 10px;
+}
+button.btn-primary:hover, .nav.nav-pills button.btn:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+.dropdown .dropdown-menu {
+    width: 250px;
+}
+.dropdown .dropdown-menu {
+    padding: 0px 0px;
+}
+.sidebar .card {
+    border: none;
+}
+		.sidebar .form-check label:before {top: 15px;}
 
-	</style>
+.sidebar .form-check label:after {top: 19px;}
+		.btn-primary:focus , .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+		
+		.tab-content .form-check label:after {top: 8px;}
 
-</head>
+.tab-content .form-check label:before {top: 4px;}
 
-<body id="page-top">
+.tab-content .card .form-check {padding: 0px 20px;}
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+.video-img {
+    margin-top: 25px;
+}
+</style>
+	</head>
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+	<body id="page-top">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">LOGO</div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Customer</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="pl-4 collapse-inner rounded">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
-    </div>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Product</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="pl-4 collapse-inner rounded">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
-    </div>
-                    </div>
-                </div>
-            </li>
-			
-			 <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Sector</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                   <div class="pl-4 collapse-inner rounded">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
-    </div>
-                    </div>
-                </div>
-            </li>
-			
-			 <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategory"
-                    aria-expanded="true" aria-controls="collapseCategory">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Category</span>
-                </a>
-                <div id="collapseCategory" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="pl-4 collapse-inner rounded">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
-    </div>
-                    </div>
-                </div>
-            </li>
-
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-           
-            <!-- Nav Item - Pages Collapse Menu -->
-           
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Basic Reports</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Top Advertisers</span></a>
-            </li>
-			
-			<li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Top Advertisers</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-           
-
-           
-
-        </ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow py-0">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    
-					 
-					
-                    
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-						
-						<div class="d-flex">
-						
-						<div class="dropdown mx-2" id="dropdownMenuButton">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Media Types
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <div class="h5 mb-0 text-gray-800">
-											
-											<div class="bg-white p-2 collapse-inner rounded">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
-      <label class="form-check-label" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked="">
-      <label class="form-check-label" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked="">
-      <label class="form-check-label" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
-    </div>
-                    </div>
-											
-											</div>
-  </div>
-</div>
-						<div class="dropdown mx-2" id="dropdownMenuButton">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Media Names
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <div class="h5 mb-0 text-gray-800">
-											
-											<div class="bg-white p-2 collapse-inner rounded">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
-      <label class="form-check-label" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked="">
-      <label class="form-check-label" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked="">
-      <label class="form-check-label" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label" for="check6">Option 6</label>
-    </div>
-                    </div>
-											
-											</div>
-  </div>
-</div>
-						
-						<div class="mx-2">
-							<div class="dropdownSelect">
-    <i class="fas fa-calendar-alt mr-2"></i><div class="caption">05-12-2022 to 08-12-2022</div>
-    <div class="list">
-      <div class="item">05-12-2022 to 08-12-2022</div>
-      <div class="item">03-12-2022 to 08-12-2022</div>
-      <div class="item">04-12-2022 to 08-12-2022</div>
-      <div class="item">07-12-2022 to 08-12-2022</div>
-      <div class="item">09-12-2022 to 08-12-2022</div>
-    </div>
-  </div>
-  
-</div>
-							 <a href="#" class="d-flex btn btn-sm btn-primary shadow-sm align-items-center">
-								 <i class="fas fa-download fa-sm text-white-50 mr-2"></i> Run Report</a>
-
-                       
-						</div>
-                    </div>
-					
-					<div class="SearchBoxDiv">
-					
-					<form class="d-none d-sm-inline-block form-inline mr-auto mx-md-auto my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light small focusInput" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-							<div class="inputSearch"></div>
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-						
-						</div>
-					
-					<div class="search-field" style="display: none;">
-						<div class="d-flex justify-content-between">
-						<h6 class="m-0 font-weight-bold text-gray-900 mb-3">Reset All Selection</h6>
-						<i class="fa fa-times closeSearch" aria-hidden="true"></i>
-							</div>
-					<div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card bg-black searchColumn h-100 py-2">
-                                <div class="card-body py-0">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-											<div class="d-flex justify-content-between align-items-center">
-											<h6 class="m-0 font-weight-bold text-white">Customer</h6>
-											<div class="search-bar">
-                        <form class="search" action="">
-                          <input class="search" type="text" placeholder="Search">
-                        </form>
-                        <span class="search-icon"><i class="fas fa-search"></i></span>
-                        
-                      </div>
-											</div>
-											
-											<hr class="mb-0">
-                                            
-                                            <div class="h5 mb-0 scrollbar" id="style-3">
-											
-											<div class="p-2 collapse-inner rounded force-overflow">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label text-white" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label text-white" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label text-white" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label text-white" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label text-white" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label text-white" for="check6">Option 6</label>
-    </div>
-                    </div>
-											
-											</div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card bg-black searchColumn h-100 py-2">
-                                <div class="card-body py-0">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-											<div class="d-flex justify-content-between align-items-center">
-											<h6 class="m-0 font-weight-bold text-white">Product</h6>
-											<div class="search-bar">
-                        <form class="search" action="">
-                          <input class="search" type="text" placeholder="Search">
-                        </form>
-                        <span class="search-icon"><i class="fas fa-search"></i></span>
-                        
-                      </div>
-											</div>
-											
-											<hr class="mb-0">
-                                            
-                                            <div class="h5 mb-0 scrollbar" id="style-3">
-											
-											<div class="p-2 collapse-inner rounded force-overflow">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label text-white" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label text-white" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label text-white" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label text-white" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label text-white" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label text-white" for="check6">Option 6</label>
-    </div>
-                    </div>
-											
-											</div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card bg-black searchColumn h-100 py-2">
-                                <div class="card-body py-0">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-											<div class="d-flex justify-content-between align-items-center">
-											<h6 class="m-0 font-weight-bold text-white">Sector</h6>
-											<div class="search-bar">
-                        <form class="search" action="">
-                          <input class="search" type="text" placeholder="Search">
-                        </form>
-                        <span class="search-icon"><i class="fas fa-search"></i></span>
-                        
-                      </div>
-											</div>
-											
-											<hr class="mb-0">
-                                            
-                                            <div class="h5 mb-0 scrollbar" id="style-3">
-											
-											<div class="p-2 collapse-inner rounded force-overflow">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label text-white" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label text-white" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label text-white" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label text-white" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label text-white" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label text-white" for="check6">Option 6</label>
-    </div>
-                    </div>
-											
-											</div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card bg-black searchColumn h-100 py-2">
-                                <div class="card-body py-0">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-											<div class="d-flex justify-content-between align-items-center">
-											<h6 class="m-0 font-weight-bold text-white">Category</h6>
-											<div class="search-bar">
-                        <form class="search" action="">
-                          <input class="search" type="text" placeholder="Search">
-                        </form>
-                        <span class="search-icon"><i class="fas fa-search"></i></span>
-                        
-                      </div>
-											</div>
-											
-											<hr class="mb-0">
-                                            
-                                            <div class="h5 mb-0 scrollbar" id="style-3">
-											
-											<div class="p-2 collapse-inner rounded force-overflow">
-                        <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
-      <label class="form-check-label text-white" for="check1">Option 1</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-      <label class="form-check-label text-white" for="check2">Option 2</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
-      <label class="form-check-label text-white" for="check3">Option 3</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
-      <label class="form-check-label text-white" for="check4">Option 4</label>
-    </div>
-						<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
-      <label class="form-check-label text-white" for="check5">Option 5</label>
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
-      <label class="form-check-label text-white" for="check6">Option 6</label>
-    </div>
-                    </div>
-											
-											</div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                
-
-                </div>
-						</div>
-                <!-- /.container-fluid -->
-					
-					
-					<div class="row justify-content-between align-items-center">
-						
-						<div class="d-flex">
-							
-						
-					 <ul class="nav nav-pills" role="tablist">
-    <li class="nav-item">
-		<button type="button" class="btn active mx-2" data-toggle="pill" href="#home">
-    View Visuals
-  </button>
+<!-- Page Wrapper -->
+<div id="wrapper"> 
       
-    </li>
-    <li class="nav-item">
-      <button type="button" class="btn mx-2" data-toggle="pill" href="#menu1">
-    By Media Type
-  </button>
-    </li>
-    <li class="nav-item">
-     <button type="button" class="btn mx-2" data-toggle="pill" href="#menu2">
-    By Media Name
-  </button>
-    </li>
-  </ul>
-							
-							
-							
-					
-						
-						</div>
-					
-						
-  
-						<div class="d-flex ms-auto">
-						
-						<div class="dropdown mx-2" id="short">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Show Values by
-  </button>
-  <div class="dropdown-menu" aria-labelledby="short">
-    <div class="h5 mb-0 text-gray-800">
-		
-		
-											
-											<div class="bg-white p-2 collapse-inner rounded">
-                      <ul class="nav flex-column">
-    <li class="nav-item">
-		<a class="nav-link text-gray-800" href="#"><h6 class="m-0">By Month</h6></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-gray-800" href="#"><h6 class="m-0">By Year</h6></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-gray-800" href="#"><h6 class="m-0">Default</h6></a>
-    </li>
+      <!-- Sidebar -->
+      <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+    
+    <!-- Sidebar - Brand --> 
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15"> <i class="fas fa-laugh-wink"></i> </div>
+        <div class="sidebar-brand-text mx-3">LOGO</div>
+        </a> 
+    
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+    
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active"> <a class="nav-link" href="index.html"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
+    
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+    
+    <!-- Heading -->
+    <div class="sidebar-heading"> Interface </div>
+    
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item"> <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Customer</span> </a>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="card bg-black searchColumn h-100 py-0">
+              <div class="card-body py-0 pr-1">
+            <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                <div class="h5 mb-0 mt-0 scrollbar" id="style-3">
+                      <div class="p-0 collapse-inner rounded force-overflow">
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
+                          <label class="form-check-label text-white" for="check1">Option 1</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                          <label class="form-check-label text-white" for="check2">Option 2</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked="">
+                          <label class="form-check-label text-white" for="check3">Option 3</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                          <label class="form-check-label text-white" for="check4">Option 4</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked="">
+                          <label class="form-check-label text-white" for="check5">Option 5</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                          <label class="form-check-label text-white" for="check6">Option 6</label>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+        </li>
+    
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item"> <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities"> <i class="fas fa-fw fa-wrench"></i> <span>Product</span> </a>
+          <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+        <div class="card bg-black searchColumn h-100 py-0">
+              <div class="card-body py-0 pr-1">
+            <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                <div class="h5 mb-0 mt-0 scrollbar" id="style-3">
+                      <div class="p-0 collapse-inner rounded force-overflow">
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
+                          <label class="form-check-label text-white" for="check1">Option 1</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                          <label class="form-check-label text-white" for="check2">Option 2</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked="">
+                          <label class="form-check-label text-white" for="check3">Option 3</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                          <label class="form-check-label text-white" for="check4">Option 4</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked="">
+                          <label class="form-check-label text-white" for="check5">Option 5</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                          <label class="form-check-label text-white" for="check6">Option 6</label>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+        </li>
+    <li class="nav-item"> <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages"> <i class="fas fa-fw fa-folder"></i> <span>Sector</span> </a>
+          <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="card bg-black searchColumn h-100 py-0">
+              <div class="card-body py-0 pr-1">
+            <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                <div class="h5 mb-0 mt-0 scrollbar" id="style-3">
+                      <div class="p-0 collapse-inner rounded force-overflow">
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
+                          <label class="form-check-label text-white" for="check1">Option 1</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                          <label class="form-check-label text-white" for="check2">Option 2</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked="">
+                          <label class="form-check-label text-white" for="check3">Option 3</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                          <label class="form-check-label text-white" for="check4">Option 4</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked="">
+                          <label class="form-check-label text-white" for="check5">Option 5</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                          <label class="form-check-label text-white" for="check6">Option 6</label>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+        </li>
+    <li class="nav-item"> <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategory"
+                    aria-expanded="true" aria-controls="collapseCategory"> <i class="fas fa-fw fa-folder"></i> <span>Category</span> </a>
+          <div id="collapseCategory" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="card bg-black searchColumn h-100 py-0">
+              <div class="card-body py-0 pr-1">
+            <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                <div class="h5 mb-0 mt-0 scrollbar" id="style-3">
+                      <div class="p-0 collapse-inner rounded force-overflow">
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
+                          <label class="form-check-label text-white" for="check1">Option 1</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                          <label class="form-check-label text-white" for="check2">Option 2</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked="">
+                          <label class="form-check-label text-white" for="check3">Option 3</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                          <label class="form-check-label text-white" for="check4">Option 4</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked="">
+                          <label class="form-check-label text-white" for="check5">Option 5</label>
+                        </div>
+                    <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                          <label class="form-check-label text-white" for="check6">Option 6</label>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+        </li>
+    
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+    
+    <!-- Nav Item - Pages Collapse Menu --> 
+    
+    <!-- Nav Item - Charts -->
+    <li class="nav-item"> <a class="nav-link" href="charts.html"> <i class="fas fa-fw fa-chart-area"></i> <span>Basic Reports</span></a> </li>
+    
+    <!-- Nav Item - Tables -->
+    <li class="nav-item"> <a class="nav-link" href="tables.html"> <i class="fas fa-fw fa-table"></i> <span>Top Advertisers</span></a> </li>
+    <li class="nav-item"> <a class="nav-link" href="tables.html"> <i class="fas fa-fw fa-table"></i> <span>Top Advertisers</span></a> </li>
+    
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+    
+    <!-- Sidebar Toggler (Sidebar) -->
     
   </ul>
+      <!-- End of Sidebar --> 
+      
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column"> 
+    
+    <!-- Main Content -->
+    <div id="content"> 
+          
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow py-0"> 
+        
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3"> <i class="fa fa-bars"></i> </button>
+        
+        <!-- Topbar Search --> 
+        
+      </nav>
+          <!-- End of Topbar --> 
+          
+          <!-- Begin Page Content -->
+          <div class="container-fluid"> 
+        
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+              <div class="d-flex">
+            <div class="dropdown mx-2" id="dropdownMenuButton">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Media Types </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="card bg-black searchColumn h-100 py-0">
+                      <div class="card-body py-0 pr-1">
+                    <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                        <div class="h5 mb-0 mt-2 scrollbar" id="style-3">
+                              <div class="p-0 collapse-inner rounded force-overflow">
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
+                                  <label class="form-check-label text-white" for="check1">Option 1</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                                  <label class="form-check-label text-white" for="check2">Option 2</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked="">
+                                  <label class="form-check-label text-white" for="check3">Option 3</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                                  <label class="form-check-label text-white" for="check4">Option 4</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked="">
+                                  <label class="form-check-label text-white" for="check5">Option 5</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                                  <label class="form-check-label text-white" for="check6">Option 6</label>
+                                </div>
+                          </div>
+                            </div>
+                      </div>
+                        </div>
+                  </div>
                     </div>
-											
-											</div>
-  </div>
-</div>
-						
-						<button type="button" class="btn btn-primary mx-2">
-    Add / Remove Cols
-  </button>
-						</div>
-							
-  
-					</div>
-					
-					
-						
-							
-							
-							<div class="tab-content">
-    <div id="home" class="container-fluid tab-pane active"><br>
-      <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card shadow h-100 py-2">
-                                <div class="card-body py-2">
-									
-									<div class="d-flex justify-content-between align-items-center">
-									<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
-      <label class="form-check-label" for="check1">Select</label>
-    </div>
-									<div class="d-flex">
-									<i class="fa fa-share-alt mx-3" aria-hidden="true"></i>
-									
-									<i class="fa fa-download" aria-hidden="true"></i>
-										</div>
-										</div>
-									
-                                    <div class="d-flex justify-content-center align-items-center video-img video-btn" style="height: 150px;" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#videoModal">
-                                        <img src="img/img.jpg" class="img-fluid" alt="">
-										<i class="fa fa-play-circle" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Annual) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card shadow h-100 py-2">
-                                <div class="card-body py-2">
-									
-									<div class="d-flex justify-content-between align-items-center">
-									<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
-      <label class="form-check-label" for="check1">Select</label>
-    </div>
-									<div class="d-flex">
-									<i class="fa fa-share-alt mx-3" aria-hidden="true"></i>
-									
-									<i class="fa fa-download" aria-hidden="true"></i>
-										</div>
-										</div>
-									
-                                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;">
-                                        <img src="img/img.jpg" class="img-fluid" alt="">
-										<i class="fa fa-play-circle" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tasks Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card shadow h-100 py-2">
-                                <div class="card-body py-2">
-									
-									<div class="d-flex justify-content-between align-items-center">
-									<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
-      <label class="form-check-label" for="check1">Select</label>
-    </div>
-									<div class="d-flex">
-									<i class="fa fa-share-alt mx-3" aria-hidden="true"></i>
-									
-									<i class="fa fa-download" aria-hidden="true"></i>
-										</div>
-										</div>
-									
-                                   <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;">
-                                        <img src="img/img.jpg" class="img-fluid" alt="">
-										<i class="fa fa-play-circle" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card shadow h-100 py-2">
-                                <div class="card-body py-2">
-									
-									<div class="d-flex justify-content-between align-items-center">
-									<div class="form-check">
-      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
-      <label class="form-check-label" for="check1">Select</label>
-    </div>
-									<div class="d-flex">
-									<i class="fa fa-share-alt mx-3" aria-hidden="true"></i>
-									
-									<i class="fa fa-download" aria-hidden="true"></i>
-										</div>
-										</div>
-									
-                                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;">
-                                        <img src="img/img.jpg" class="img-fluid" alt="">
-										<i class="fa fa-play-circle" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    </div>
-    <div id="menu1" class="container-fluid tab-pane fade"><br>
-      <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Product</th>
-        <th>Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-      <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-     <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-		 <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-     <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-    </tbody>
-  </table>
-    </div>
-    <div id="menu2" class="container-fluid tab-pane fade"><br>
-      <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Product</th>
-        <th>Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-      <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-     <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-		 <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-     <tr>
-        <td>Russian Commercial Bank</td>
-        <td>Russian Commercial Bank</td>
-        <td>$34324.25</td>
-      </tr>
-    </tbody>
-  </table>
-    </div>
-  </div>
-					
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white mt-3">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; 2022</span>
-                    </div>
+              </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
+            <div class="dropdown mx-2" id="dropdownMenuButton">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Media Names </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="card bg-black searchColumn h-100 py-0">
+                      <div class="card-body py-0 pr-1">
+                    <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                        <div class="h5 mb-0 mt-2 scrollbar" id="style-3">
+                              <div class="p-0 collapse-inner rounded force-overflow">
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
+                                  <label class="form-check-label text-white" for="check1">Option 1</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                                  <label class="form-check-label text-white" for="check2">Option 2</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked="">
+                                  <label class="form-check-label text-white" for="check3">Option 3</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                                  <label class="form-check-label text-white" for="check4">Option 4</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked="">
+                                  <label class="form-check-label text-white" for="check5">Option 5</label>
+                                </div>
+                            <div class="form-check">
+                                  <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                                  <label class="form-check-label text-white" for="check6">Option 6</label>
+                                </div>
+                          </div>
+                            </div>
+                      </div>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+            <div class="mx-2">
+                  <div class="dropdownSelect"> <i class="fas fa-calendar-alt mr-2"></i>
+                <div class="caption">05-12-2022 to 08-12-2022</div>
+                <div class="list">
+                      <div class="item">05-12-2022 to 08-12-2022</div>
+                      <div class="item">03-12-2022 to 08-12-2022</div>
+                      <div class="item">04-12-2022 to 08-12-2022</div>
+                      <div class="item">07-12-2022 to 08-12-2022</div>
+                      <div class="item">09-12-2022 to 08-12-2022</div>
+                    </div>
+              </div>
+                </div>
+            <button class="d-flex btn btn-sm btn-primary align-items-center"> <i class="fas fa-download fa-sm text-white-50 mr-2"></i> Run Report</button>
+          </div>
+            </div>
+        <div class="SearchBoxDiv">
+              <form class="d-none d-sm-inline-block form-inline mr-auto mx-md-auto my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                  <input type="text" class="form-control bg-light small focusInput" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="inputSearch"></div>
+                  <div class="input-group-append">
+                <button class="btn btn-primary" type="button"> <i class="fas fa-search fa-sm"></i> </button>
+              </div>
+                </div>
+          </form>
+            </div>
+        <div class="search-field" style="display: none;">
+              <div class="d-flex justify-content-between">
+            <h6 class="m-0 font-weight-bold text-gray-900 mb-3">Reset All Selection</h6>
+            <i class="fa fa-times closeSearch" aria-hidden="true"></i> </div>
+              <div class="row"> 
+            
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                  <div class="card bg-black searchColumn h-100 py-3">
+                <div class="card-body py-0">
+                      <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                          <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="m-0 text-white">Customer</h6>
+                        <div class="search-bar">
+                              <form class="search" action="">
+                            <input class="search" type="text" placeholder="Search">
+                          </form>
+                              <span class="search-icon"><i class="fas fa-search"></i></span> </div>
+                      </div>
+                          <hr class="mb-0">
+                          <div class="h5 mb-0 scrollbar" id="style-3">
+                        <div class="p-0 collapse-inner rounded force-overflow">
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                            <label class="form-check-label text-white" for="check1">Option 1</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                            <label class="form-check-label text-white" for="check2">Option 2</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
+                            <label class="form-check-label text-white" for="check3">Option 3</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                            <label class="form-check-label text-white" for="check4">Option 4</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
+                            <label class="form-check-label text-white" for="check5">Option 5</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                            <label class="form-check-label text-white" for="check6">Option 6</label>
+                          </div>
+                            </div>
+                      </div>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                  <div class="card bg-black searchColumn h-100 py-3">
+                <div class="card-body py-0">
+                      <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                          <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="m-0 text-white">Product</h6>
+                        <div class="search-bar">
+                              <form class="search" action="">
+                            <input class="search" type="text" placeholder="Search">
+                          </form>
+                              <span class="search-icon"><i class="fas fa-search"></i></span> </div>
+                      </div>
+                          <hr class="mb-0">
+                          <div class="h5 mb-0 scrollbar" id="style-3">
+                        <div class="p-0 collapse-inner rounded force-overflow">
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                            <label class="form-check-label text-white" for="check1">Option 1</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                            <label class="form-check-label text-white" for="check2">Option 2</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
+                            <label class="form-check-label text-white" for="check3">Option 3</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                            <label class="form-check-label text-white" for="check4">Option 4</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
+                            <label class="form-check-label text-white" for="check5">Option 5</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                            <label class="form-check-label text-white" for="check6">Option 6</label>
+                          </div>
+                            </div>
+                      </div>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+            
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                  <div class="card bg-black searchColumn h-100 py-3">
+                <div class="card-body py-0">
+                      <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                          <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="m-0 text-white">Sector</h6>
+                        <div class="search-bar">
+                              <form class="search" action="">
+                            <input class="search" type="text" placeholder="Search">
+                          </form>
+                              <span class="search-icon"><i class="fas fa-search"></i></span> </div>
+                      </div>
+                          <hr class="mb-0">
+                          <div class="h5 mb-0 scrollbar" id="style-3">
+                        <div class="p-0 collapse-inner rounded force-overflow">
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                            <label class="form-check-label text-white" for="check1">Option 1</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                            <label class="form-check-label text-white" for="check2">Option 2</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
+                            <label class="form-check-label text-white" for="check3">Option 3</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                            <label class="form-check-label text-white" for="check4">Option 4</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
+                            <label class="form-check-label text-white" for="check5">Option 5</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                            <label class="form-check-label text-white" for="check6">Option 6</label>
+                          </div>
+                            </div>
+                      </div>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+            
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                  <div class="card bg-black searchColumn h-100 py-3">
+                <div class="card-body py-0">
+                      <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                          <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="m-0 text-white">Category</h6>
+                        <div class="search-bar">
+                              <form class="search" action="">
+                            <input class="search" type="text" placeholder="Search">
+                          </form>
+                              <span class="search-icon"><i class="fas fa-search"></i></span> </div>
+                      </div>
+                          <hr class="mb-0">
+                          <div class="h5 mb-0 scrollbar" id="style-3">
+                        <div class="p-0 collapse-inner rounded force-overflow">
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                            <label class="form-check-label text-white" for="check1">Option 1</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                            <label class="form-check-label text-white" for="check2">Option 2</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something" checked>
+                            <label class="form-check-label text-white" for="check3">Option 3</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">
+                            <label class="form-check-label text-white" for="check4">Option 4</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check5" name="option5" value="something" checked>
+                            <label class="form-check-label text-white" for="check5">Option 5</label>
+                          </div>
+                              <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check6" name="option6" value="something">
+                            <label class="form-check-label text-white" for="check6">Option 6</label>
+                          </div>
+                            </div>
+                      </div>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+        <!-- /.container-fluid -->
+        
+        <div class="row justify-content-between align-items-center">
+              <div class="d-flex">
+            <ul class="nav nav-pills" role="tablist">
+                  <li class="nav-item">
+                <button type="button" class="btn active mx-2" data-toggle="pill" href="#home"> View Visuals </button>
+              </li>
+                  <li class="nav-item">
+                <button type="button" class="btn mx-2" data-toggle="pill" href="#menu1"> By Media Type </button>
+              </li>
+                  <li class="nav-item">
+                <button type="button" class="btn mx-2" data-toggle="pill" href="#menu2"> By Media Name </button>
+              </li>
+                </ul>
+          </div>
+              <div class="d-flex ms-auto">
+            <div class="dropdown mx-2" id="short">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Show Values by </button>
+                  <div class="dropdown-menu" aria-labelledby="short">
+                <div class="h5 mb-0 text-gray-800">
+                      <div class="bg-black p-2 collapse-inner rounded">
+                    <ul class="nav flex-column">
+                          <li class="nav-item"> <a class="nav-link text-gray-800" href="#">
+                            <h6 class="m-0 text-white">By Month</h6>
+                            </a> </li>
+                          <li class="nav-item"> <a class="nav-link text-gray-800" href="#">
+                            <h6 class="m-0 text-white">By Year</h6>
+                            </a> </li>
+                          <li class="nav-item"> <a class="nav-link text-gray-800" href="#">
+                            <h6 class="m-0 text-white">Default</h6>
+                            </a> </li>
+                        </ul>
+                  </div>
+                    </div>
+              </div>
+                </div>
+            <button type="button" class="btn btn-primary mx-2"> Add / Remove Cols </button>
+          </div>
+            </div>
+        <div class="tab-content">
+              <div id="home" class="container-fluid tab-pane active"><br>
+            <div class="row"> 
+                  
+                  <!-- Earnings (Monthly) Card Example -->
+                  <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card shadow h-100 py-2">
+                      <div class="card-body py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                          <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
+                        <label class="form-check-label" for="check1">Select</label>
+                      </div>
+                          <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
+                        </div>
+                    <div class="d-flex justify-content-center align-items-center video-img video-btn" style="height: 150px;" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#videoModal"> <img src="img/img.jpg" class="img-fluid" alt=""> <i class="fa fa-play-circle" aria-hidden="true"></i> </div>
+                  </div>
+                    </div>
+              </div>
+                  
+                  <!-- Earnings (Annual) Card Example -->
+                  <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card shadow h-100 py-2">
+                      <div class="card-body py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                          <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
+                        <label class="form-check-label" for="check1">Select</label>
+                      </div>
+                          <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
+                        </div>
+                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;"> <img src="img/img.jpg" class="img-fluid" alt=""> <i class="fa fa-play-circle" aria-hidden="true"></i> </div>
+                  </div>
+                    </div>
+              </div>
+                  
+                  <!-- Tasks Card Example -->
+                  <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card shadow h-100 py-2">
+                      <div class="card-body py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                          <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
+                        <label class="form-check-label" for="check1">Select</label>
+                      </div>
+                          <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
+                        </div>
+                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;"> <img src="img/img.jpg" class="img-fluid" alt=""> <i class="fa fa-play-circle" aria-hidden="true"></i> </div>
+                  </div>
+                    </div>
+              </div>
+                  
+                  <!-- Pending Requests Card Example -->
+                  <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card shadow h-100 py-2">
+                      <div class="card-body py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                          <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
+                        <label class="form-check-label" for="check1">Select</label>
+                      </div>
+                          <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
+                        </div>
+                    <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;"> <img src="img/img.jpg" class="img-fluid" alt=""> <i class="fa fa-play-circle" aria-hidden="true"></i> </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+              <div id="menu1" class="container-fluid tab-pane fade"><br>
+            <div class="segmentation-block">
+                  <table class="table table-borderless">
+                <thead>
+                      <tr>
+                    <th scope="col"><h4 class="color1"> Class</h4></th>
+                    <th scope="col"><h4 class="color2">Product</h4></th>
+                    <th scope="col"><h4 class="color3"> Total</h4></th>
+                  </tr>
+                    </thead>
+                <tbody>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                    </tbody>
+              </table>
+                </div>
+          </div>
+              <div id="menu2" class="container-fluid tab-pane fade"><br>
+            <div class="segmentation-block">
+                  <table class="table table-borderless">
+                <thead>
+                      <tr>
+                    <th scope="col"><h4 class="color1"> Class</h4></th>
+                    <th scope="col"><h4 class="color2">Product</h4></th>
+                    <th scope="col"><h4 class="color3"> Total</h4></th>
+                  </tr>
+                    </thead>
+                <tbody>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                      <tr>
+                    <td><h3 class="color1"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color2"><span>Russian Commercial Bank</span></h3></td>
+                    <td><h3 class="color3"><span> $34324.25</span></h3></td>
+                  </tr>
+                    </tbody>
+              </table>
+                </div>
+          </div>
+            </div>
+      </div>
+          <!-- End of Main Content --> 
+          
+          <!-- Footer -->
+          <footer class="sticky-footer bg-white mt-3">
+        <div class="container my-auto">
+              <div class="copyright text-center my-auto"> <span>Copyright &copy; 2022</span> </div>
+            </div>
+      </footer>
+          <!-- End of Footer --> 
+          
         </div>
-        <!-- End of Content Wrapper -->
-
+    <!-- End of Content Wrapper --> 
+    
+  </div>
     </div>
-		
-		</div>
-    <!-- End of Page Wrapper -->
+<!-- End of Page Wrapper --> 
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+<!-- Scroll to Top Button--> 
+<a class="scroll-to-top rounded" href="#page-top"> <i class="fas fa-angle-up"></i> </a> 
 
-    <!-- Logout Modal-->
-    <div class="modal fade videoModal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<!-- Logout Modal-->
+<div class="modal fade videoModal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-               
-                <div class="modal-body"><div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-</div></div>
-                <div class="modal-footers px-3 d-flex align-items-center justify-content-between">
-                   
-					<div class="detail-video col-12">	
-						<div class="d-flex my-1">
-					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Product</b></label><span>Russian Commercial Bank</span>
-					
-					</div>
-						<div class="d-flex my-1">
-					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Media Type</b></label><span>MG</span>
-					
-					</div>
-						<div class="d-flex my-1">
-					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Size</b></label><span>MG</span>
-					
-					</div>
-						<div class="d-flex my-1">
-					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Date</b></label><span>20-12-2022</span>
-					
-					</div>
-						<div class="d-flex my-1">
-					<label class="col-3 mr-3 mb-0 text-gray-900"><b>Value</b></label><span>45000.00</span>
-					
-					</div>
-					</div>
-					
-				
-					<div class="d-flex">
-									<i class="fa fa-share-alt mx-3" aria-hidden="true"></i>
-									
-									<i class="fa fa-download" aria-hidden="true"></i>
-										</div>
-					
-					
-                </div>
+      <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+          <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
             </div>
+      </div>
+          <div class="modal-footers px-3 d-flex align-items-center justify-content-between">
+        <div class="detail-video col-12">
+              <div class="d-flex my-1">
+            <label class="col-3 mr-3 mb-0 text-gray-900"><b>Product</b></label>
+            <span>Russian Commercial Bank</span> </div>
+              <div class="d-flex my-1">
+            <label class="col-3 mr-3 mb-0 text-gray-900"><b>Media Type</b></label>
+            <span>MG</span> </div>
+              <div class="d-flex my-1">
+            <label class="col-3 mr-3 mb-0 text-gray-900"><b>Size</b></label>
+            <span>MG</span> </div>
+              <div class="d-flex my-1">
+            <label class="col-3 mr-3 mb-0 text-gray-900"><b>Date</b></label>
+            <span>20-12-2022</span> </div>
+              <div class="d-flex my-1">
+            <label class="col-3 mr-3 mb-0 text-gray-900"><b>Value</b></label>
+            <span>45000.00</span> </div>
+            </div>
+        <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
+      </div>
         </div>
+  </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript--> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-
-
+<!-- Custom scripts for all pages--> 
+<script src="js/sb-admin-2.min.js"></script> 
 <script>
         var icon = $('.search-icon');
 var form = $('form.search');
@@ -1299,8 +1261,7 @@ icon.click(function() {
     form.children('input.search').focus();
   }
 });
-    </script>
-	
+    </script> 
 <script>
 	
 
@@ -1317,19 +1278,18 @@ $('.inputSearch').click(function() {
 });	
 		
 	
-</script>	
-	
+</script> 
 <script>
 	
 $(document).ready(function() {
 
 // Gets the video src from the data-src on each button
 
-var $videoSrc;  
+var videoSrc;  
 $('.video-btn').click(function() {
-    $videoSrc = $(this).data( "src" );
+    videoSrc = $(this).data( "src" );
 });
-console.log($videoSrc);
+console.log(videoSrc);
 
   
   
@@ -1337,7 +1297,7 @@ console.log($videoSrc);
 $('#videoModal').on('shown.bs.modal', function (e) {
     
 // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+$("#video").attr('src',videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
 })
   
 
@@ -1345,7 +1305,7 @@ $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinf
 // stop playing the youtube video when I close the modal
 $('#videoModal').on('hide.bs.modal', function (e) {
     // a poor man's stop video
-    $("#video").attr('src',$videoSrc); 
+    $("#video").attr('src',videoSrc); 
 }) 
     
     
@@ -1358,9 +1318,7 @@ $('#videoModal').on('hide.bs.modal', function (e) {
 
 	
 	
-</script>	
-	
-	
+</script> 
 <script>
 	
 $(function() {
@@ -1388,9 +1346,6 @@ $(function() {
   
 });	
 	
-</script>	
-	
-
+</script>
 </body>
-
 </html>
