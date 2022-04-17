@@ -136,13 +136,13 @@ i.fa.fa-play-circle {
     background: transparent;
 }
 .form-check label:after {
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
     background: #0972dd;
     position: absolute;
-    top: 24px;
-    left: 4px;
-    border-radius: 100%;
+    top: 20px;
+    left: 0px;
+    border-radius: 5px;
 }
 .card .form-check {
     margin: 0px 0px;
@@ -166,14 +166,17 @@ i.fa.fa-play-circle {
     z-index: 99;
 }
 i.fa.fa-download, i.fa.fa-share-alt {
-    color: #4e73df;
+    color: #000;
+}
+#sidebarToggleTop i.fa.fa-bars {
+    color: #000;
+    font-size: 20px;
 }
 .tab-content {
     background: #fff;
     margin-top: 20px;
 }
 .SearchBoxDiv {
-    background: #fff;
     padding: 15px 15px;
     text-align: center;
     border-radius: 8px;
@@ -227,16 +230,17 @@ div.dropdownSelect {
 }
 .dropdownSelect i.fas.fa-calendar-alt {
     position: absolute;
-    color: #fff;
-    top: 10px;
-    left: 6px;
+    color: #000;
+    top: 7px;
+    left: 10px;
 }
 div.dropdownSelect > div.caption {
-    background-color: #4e73df;
-    padding: 7px 10px 7px 30px;
+    background-color: #d3dce0;
+    padding: 4px 10px 4px 30px;
     border-radius: 10px;
     cursor: pointer;
-    color: #fff;
+    color: #000;
+    border: 1px solid #000;
 }
 div.dropdownSelect > div.list {
     position: absolute;
@@ -259,6 +263,10 @@ div.dropdownSelect > div.list > div.item.selected {
 }
 div.dropdownSelect > div.caption:hover {
     background-color: #000;
+	color: #fff;
+}
+		.dropdownSelect:hover i.fas.fa-calendar-alt {
+    color: #fff;
 }
 div.dropdownSelect > div.list > div.item:hover {
     background-color: #333;
@@ -279,7 +287,7 @@ div#wrapper #content-wrapper {
     color: #333;
     border-left: 0;
     border-color: #000;
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 10px 10px 0px;
 }
 footer.sticky-footer {
     padding: 1rem 0;
@@ -410,7 +418,8 @@ div.segmentation-block h4 {
 }
 .SearchBoxDiv input.form-control {
     border-color: #000;
-    border-radius: 20px;
+    border-radius: 10px 0px 0px 10px;
+	height: 45px;
 }
 .btn-primary {
     border-radius: 10px;
@@ -431,13 +440,17 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
 }
 		.sidebar .form-check label:before {top: 15px;}
 
-.sidebar .form-check label:after {top: 19px;}
+.sidebar .form-check label:after {top: 15px;}
 		.btn-primary:focus , .btn:focus {
     outline: none !important;
     box-shadow: none !important;
+			
+}
+		button.btn.dropdown-toggle:focus {
+    background: transparent;
 }
 		
-		.tab-content .form-check label:after {top: 8px;}
+		.tab-content .form-check label:after {top: 4px;}
 
 .tab-content .form-check label:before {top: 4px;}
 
@@ -445,6 +458,9 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
 
 .video-img {
     margin-top: 25px;
+}
+		i.fa {
+    cursor: pointer;
 }
 </style>
 	</head>
@@ -687,9 +703,9 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
               <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-              <div class="d-flex">
+              <div class="d-flex nav nav-pills">
             <div class="dropdown mx-2" id="dropdownMenuButton">
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Media Types </button>
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Types</button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <div class="card bg-black searchColumn h-100 py-0">
                       <div class="card-body py-0 pr-1">
@@ -730,7 +746,7 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
               </div>
                 </div>
             <div class="dropdown mx-2" id="dropdownMenuButton">
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Media Names </button>
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Media Names </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <div class="card bg-black searchColumn h-100 py-0">
                       <div class="card-body py-0 pr-1">
@@ -782,7 +798,7 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
                     </div>
               </div>
                 </div>
-            <button class="d-flex btn btn-sm btn-primary align-items-center"> <i class="fas fa-download fa-sm text-white-50 mr-2"></i> Run Report</button>
+            <button class="d-flex btn btn-sm btn-primary align-items-center text-white border-0"> <i class="fas fa-download fa-sm text-white-50 mr-2"></i> Run Report</button>
           </div>
             </div>
         <div class="SearchBoxDiv">
@@ -1015,9 +1031,9 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
               </li>
                 </ul>
           </div>
-              <div class="d-flex ms-auto">
+              <div class="d-flex ms-auto nav nav-pills">
             <div class="dropdown mx-2" id="short">
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Show Values by </button>
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Show Values by </button>
                   <div class="dropdown-menu" aria-labelledby="short">
                 <div class="h5 mb-0 text-gray-800">
                       <div class="bg-black p-2 collapse-inner rounded">
@@ -1036,7 +1052,7 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
                     </div>
               </div>
                 </div>
-            <button type="button" class="btn btn-primary mx-2"> Add / Remove Cols </button>
+            <button type="button" class="btn mx-2"> Add / Remove Cols </button>
           </div>
             </div>
         <div class="tab-content">
@@ -1049,12 +1065,13 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
                       <div class="card-body py-2">
                     <div class="d-flex justify-content-between align-items-center">
                           <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked="">
-                        <label class="form-check-label" for="check1">Select</label>
+                        <input type="checkbox" class="form-check-input" id="vcheck1" name="option1" value="something">
+                        <label class="form-check-label" for="vcheck1">Select</label>
                       </div>
                           <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
                         </div>
                     <div class="d-flex justify-content-center align-items-center video-img video-btn" style="height: 150px;" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#videoModal"> <img src="img/img.jpg" class="img-fluid" alt=""> <i class="fa fa-play-circle" aria-hidden="true"></i> </div>
+						  <h6 class="text-center mt-4 text-gray-900">Product Heading Sample Text</h6>
                   </div>
                     </div>
               </div>
@@ -1065,12 +1082,13 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
                       <div class="card-body py-2">
                     <div class="d-flex justify-content-between align-items-center">
                           <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
-                        <label class="form-check-label" for="check1">Select</label>
+                        <input type="checkbox" class="form-check-input" id="vcheck2" name="option1" value="something">
+                        <label class="form-check-label" for="vcheck2">Select</label>
                       </div>
                           <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
                         </div>
                     <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;"> <img src="img/img.jpg" class="img-fluid" alt=""> <i class="fa fa-play-circle" aria-hidden="true"></i> </div>
+						  <h6 class="text-center mt-4 text-gray-900">Product Heading Sample Text</h6>
                   </div>
                     </div>
               </div>
@@ -1087,6 +1105,7 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
                           <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
                         </div>
                     <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;"> <img src="img/img.jpg" class="img-fluid" alt=""> <i class="fa fa-play-circle" aria-hidden="true"></i> </div>
+						  <h6 class="text-center mt-4 text-gray-900">Product Heading Sample Text</h6>
                   </div>
                     </div>
               </div>
@@ -1103,6 +1122,7 @@ button.btn-primary:hover, .nav.nav-pills button.btn:hover {
                           <div class="d-flex"> <i class="fa fa-share-alt mx-3" aria-hidden="true"></i> <i class="fa fa-download" aria-hidden="true"></i> </div>
                         </div>
                     <div class="d-flex justify-content-center align-items-center video-img" style="height: 150px;"> <img src="img/img.jpg" class="img-fluid" alt=""> <i class="fa fa-play-circle" aria-hidden="true"></i> </div>
+						  <h6 class="text-center mt-4 text-gray-900">Product Heading Sample Text</h6>
                   </div>
                     </div>
               </div>
